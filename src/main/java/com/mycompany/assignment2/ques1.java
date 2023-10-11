@@ -27,20 +27,24 @@ class node<T>
     }
 }
 
-class Stack<T> {
+class Stack<T> 
+{
     node<T> head;
     int size;
     
-    Stack(int s) {
+    Stack(int s)
+    {
         head = null;
         size = s;
     }
 
-    public int size() {
+    public int size() 
+    {
         return size;
     }
 
-    public void push(T item) {
+    public void push(T item) 
+    {
         node<T> newNode = new node<>(item);
         newNode.next = head;
         head = newNode;
@@ -51,7 +55,8 @@ class Stack<T> {
         return size == 0;
     }
 
-    public T pop() {
+    public T pop() 
+    {
       
     if (isEmpty()) 
     {
@@ -65,20 +70,25 @@ class Stack<T> {
 
     }
 
-    public T peek() {
-        if (isEmpty()) {
+    public T peek()
+    {
+        if (isEmpty()) 
+        {
             throw new EmptyStackException();
         }
         return head.data;
     }
 
-    public void display() {
-        if (isEmpty()) {
+    public void display() 
+    {
+        if (isEmpty())
+        {
             System.out.println("Stack is empty.");
             return;
         }
         node<T> temp = head;
-        while (temp != null) {
+        while (temp != null) 
+        {
             System.out.print(temp.data + " ");
             temp = temp.next;
         }
@@ -98,7 +108,8 @@ public class ques1
         try
         {
             sInt= obj.nextInt();
-        } catch (InputMismatchException e) 
+        } 
+        catch (InputMismatchException e) 
         {
             System.out.println("Invalid input for stack size.");
             return;
@@ -114,7 +125,8 @@ public class ques1
             try
             {
                 val = obj.nextInt();
-            } catch (InputMismatchException e) 
+            } 
+            catch (InputMismatchException e) 
             {
                 System.out.println("Invalid input for integer value.");
                 return;
@@ -130,11 +142,13 @@ public class ques1
          try 
          {
             sFloat = obj.nextInt();
-        } catch (InputMismatchException e) 
+        } 
+         catch (InputMismatchException e) 
         {
             System.out.println("Invalid input for stack size.");
             return;
         }
+         
           Stack<Float> stac = new Stack<>(sFloat);
         for (int i = 1; i <= sFloat; i++)
         {
@@ -207,9 +221,10 @@ public class ques1
                     {
                         System.out.println("The popped element is: " + s.pop());
                         System.out.println("The updated size of stack is: " + s.size());
-                    } catch (EmptyStackException e) 
+                    }
+                    catch (EmptyStackException e) 
                     {
-                        System.out.println("Stack is empty cannot pop.");
+                        System.out.println("Stack is empty cannot pop");
                     }
                     break;
                 }
@@ -228,9 +243,10 @@ public class ques1
                     try
                     {
                         System.out.println("The peeked element is: " + s.peek());
-                    } catch (EmptyStackException e) 
+                    } 
+                    catch (EmptyStackException e) 
                     {
-                        System.out.println("Stack is empty. Cannot peek.");
+                        System.out.println("Stack is empty Cannot peek");
                     }
                     break;
                 }
