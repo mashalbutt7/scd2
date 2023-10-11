@@ -20,7 +20,8 @@ class node<T>
     T data;
     node<T> next;
 
-    node(T data) {
+    node(T data) 
+    {
         this.data = data;
         this.next = null;
     }
@@ -85,7 +86,8 @@ class Stack<T> {
     }
 }
 
-public class ques1 {
+public class ques1 
+{
     
    
     public static void main(String[] args) 
@@ -188,6 +190,7 @@ public class ques1 {
         String choice = "";
         do 
         {
+            //obj.nextLine();
             System.out.println("Pop");
             System.out.println("Size");
             System.out.println("Isempty");
